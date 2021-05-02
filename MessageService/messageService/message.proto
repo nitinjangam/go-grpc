@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "github.com/nitinjangam/go-grpc/MessageService/messageService";
+
+package messageService;
+
+//The Message service definition.
+service MessageService {
+    //Sends a message
+    rpc SendMessage (SendMessageRequest) returns (SendMessageResponse) {}
+}
+
+// The request message contains greeting.
+message SendMessageRequest {
+    string greet = 1;
+}
+
+// The response message containing greeting from services
+message SendMessageResponse {
+    string message = 1;
+}

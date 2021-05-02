@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package greet;
+
+option go_package = "github.com/nitinjangam/go-grpc/GreetingService/Greetpb";
+
+message Greeting {
+    string greetMessage = 1;
+}
+
+service GreetingService {
+    rpc Greet (Greeting) returns (Greeting) {};
+}

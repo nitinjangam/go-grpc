@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package greetpb;
+
+option go_package = "github.com/nitinjangam/go-grpc/QuoteService/Quotepb";
+
+message QuoteRequest {
+    string getQoute = 1;
+}
+
+message QuoteResponse {
+    string QuoteReply = 1;
+}
+
+service QuoteService {
+    rpc Quote (QuoteRequest) returns (QuoteResponse) {}
+}
